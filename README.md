@@ -3,7 +3,7 @@ a tiny keygen for windows 95 OEM editions in ANSI C
 
 # preview:
 ![master](
-2023-09-19-002034_331x157_scrot.png)
+2023-09-19-122145_356x175_scrot.png)
 
 # credits:
 - @endermanch - for explaining how windows 95 checks keys
