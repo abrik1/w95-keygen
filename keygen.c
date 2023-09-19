@@ -25,6 +25,6 @@ int gen_n1(){
 int main(){
   srand((unsigned int)time(NULL));
   int n = gen_n1();
-  printf("%d%d-OEM-00%d-%d\n", rand() % 366, year_format[rand() % 4], n, rand() % 99999 + 9999);
+  printf("%d%d-OEM-00%d-%d\n", rand() % 366 + 100, year_format[rand() % 4], n, rand() % 99999 + 9999);
   return 0;
 }
