@@ -1,5 +1,5 @@
 # w95-keygen
-a tiny keygen for windows 95 OEM editions in ANSI C
+a tiny keygen for W95 OEM and Retail in ANSI C.. works with c89
 
 # preview:
 ![master](
