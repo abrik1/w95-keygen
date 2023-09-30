@@ -3,9 +3,6 @@
 #include <time.h>
 
 int year_format[5] = {95, 96, 97, 98, 99};
-int num = 0;
-int sum = 0;
-int date = 0;
 int key_mode = 0;
 
 int randint(int min, int max){
@@ -21,11 +18,7 @@ int randint(int min, int max){
 
 int gen_n1(){
   for(;;){
-    if(key_mode == 0){
-      num = randint(9999, 99999);
-    } else{
-      num = randint(999999, 9999999);
-    }
+    int num = key_mode == 0 ? randint(9999, 99999) : randint(999999, 9999999);
     int num2 = num;
     int sum = 0;
     while(num != 0){
@@ -41,10 +34,8 @@ int gen_n1(){
 int gen_retail_n1(){
   for(;;){
     int num = randint(100, 999);
-    if (num != 111 && num % 111 == 0){
-      continue;
-    } else{
-      return num;
+    if (!num % 111 == 0){
+	return num;
     }
   }
 }
