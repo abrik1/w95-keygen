@@ -2,19 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-int year_format[5] = {95, 96, 97, 98, 99};
 int key_mode = 0;
 
-int randint(int min, int max){
-  for(;;){
-    int num = rand() % max + min;
-    if(num > max){
-      continue;
-    } else{
-      return num;
-    }
-  }
-}
+#define randint(min, max) rand() % (max - min + 1) + min
 
 int gen_n1(){
   for(;;){
@@ -42,7 +32,7 @@ int gen_retail_n1(){
 
 int main(){
   srand((unsigned int)time(NULL));
-  printf("OEM: %d%d-OEM-00%d-%d\n", randint(100, 366), year_format[rand() % 4], gen_n1(), randint(10000, 99999));
+  printf("OEM: %d%d-OEM-00%d-%d\n", randint(100, 366), randint(95, 99), gen_n1(), randint(10000, 99999));
   key_mode = 1;
   printf("Retail: %d-%d\n", gen_retail_n1(), gen_n1());
   return 0;
